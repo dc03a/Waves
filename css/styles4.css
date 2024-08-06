@@ -1,0 +1,1373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "KAUSHAN SCRIPT", serif;
+}
+
+@font-face {
+  font-family: "KAUSHAN SCRIPT";
+  src: url(../fonts/KaushanScript-Regular.otf);
+  font-size: small;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Lulo";
+  src: url(../fonts/FontsFree-Net-Lulo-Clean-W01-One.ttf);
+  font-size: small;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url(../fonts/Avenir-Light.ttf);
+  font-size: small;
+  font-weight: 400;
+}
+
+/*********BODY********/
+
+/*********HEADER********/
+
+header {
+  position: relative;
+  height: 1130px;
+  background-image: url("../images/fondoPrincipal.jpg");
+  background-size: cover;
+}
+
+/*********NAV********/
+.enlace-logo img {
+  margin-left: 40px;
+  margin-top: 15px;
+  height: auto;
+  width: 80px;
+}
+
+.enlace-logo {
+  position: relative;
+}
+
+#check {
+  display: none;
+}
+
+.checkbtn {
+  display: none;
+  position: absolute;
+  top: 35%;
+  right: 0;
+  margin-right: 2%;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+nav {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  transition: 1.7s;
+  height: 10%;
+  margin-bottom: 3.5%;
+  border-bottom: 1px solid grey;
+}
+
+.menu-horizontal {
+  float: right;
+  position: relative;
+  text-align: start;
+  font-weight: 500;
+  margin-right: 2%;
+  top: 40px;
+}
+
+.menu-horizontal li {
+  font-size: 19px;
+  list-style: none;
+  display: inline-block;
+  padding: 0 15px 0 15px;
+  position: relative;
+
+}
+
+.menu-horizontal .bx-user {
+  font-size: 25px;
+}
+
+.menu-horizontal li a {
+  text-decoration: none;
+  border-top: 2px groove #333333;
+  color: black;
+}
+
+.menu-horizontal li a:hover {
+  border: none;
+  border-top: 5px solid black;
+}
+
+.menu-vertical {
+  position: absolute;
+  display: none;
+  width: 100px;
+  background: #37a5bd;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  padding: 15px 20px 15px 0;
+}
+
+.menu-vertical li a {
+  position: relative;
+  top: 0;
+  line-height: 35px;
+  border: none;
+}
+
+.menu-vertical li a:hover {
+  border-top: none;
+  border-bottom: 1px solid black;
+
+}
+
+.menu-horizontal li:hover .menu-vertical {
+  display: block;
+}
+
+/*********FIN NAV*********/
+
+/*********FIN HEADER*********/
+
+/*********MAIN*********/
+.main {
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-Registro {
+  position: absolute;
+  top: 290px;
+  left: 39%;
+  right: 39%;
+}
+
+.wrapper {
+  width: 420px;
+  background: rgba(255,255,255, .1);
+  border: 2px solid rgba(255, 255, 255, .4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+  backdrop-filter: blur(20px);
+  color: black;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+.wrapper h1 {
+  font-size: 32px;
+  text-align: center;
+  color: black;
+}
+
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  font-size: 15px;
+  font-family: "Avenir", serif;
+  width: 99%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border: 2px solid rgba(0,0,0, .3);
+  border-radius: 20px;
+  color: black;
+  padding: 10px;
+}
+
+.icono-validacion {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+}
+
+.icono-validacion::before {
+  font-size: 0.9rem;
+}
+
+input[type="email"]:focus:valid {
+  display: inline;
+  text-transform: none;
+  color: #0cff21;
+}
+
+input[type="email"]:focus:invalid {
+  display: inline;
+  text-transform: none;
+  color: #8b2736;
+  content: "❌";
+}
+
+#guiaContraseña {
+  display: none;
+  margin-top: -10px;
+  font-size: 0.9rem;
+  color: #8b2736;
+  margin-bottom: 15px;
+}
+
+.input-box input::placeholder {
+  color: black;
+  text-transform: none;
+}
+
+.input-box label i {
+  font-size: 15px;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+}
+
+.wrapper .condiciones {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px
+}
+
+.condiciones a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.condiciones a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .boton {
+  width: 100%;
+  height: 45px;
+  margin-top: 20px;
+  background: white;
+  border: none;
+  outline: none;
+  border-radius: 35px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.boton:hover {
+  cursor: pointer;
+}
+
+.wrapper .registrarse {
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.registrarse p a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.registrarse p a:hover {
+  text-decoration: underline;
+}
+
+
+/*********FIN MAIN*********/
+
+/*********FOOTER*********/
+
+.footer-line {
+  position: relative;
+  top: 150%;
+  margin-top: 0.1%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+/*CONTENEDOR CAJA 1*/
+
+#contenedor-cajas {
+  position: relative;
+  display: flex;
+  flex-direction: inherit;
+  margin-bottom: 1%;
+}
+
+.caja-grande {
+  flex-grow: 0.2;
+  width: 30%;
+  align-items: center;
+  position: relative;
+}
+
+.caja-grande img {
+  position: relative;
+  top: 30%;
+  width: 28%;
+  margin-left: 10%;
+}
+
+.textos1 {
+  position: absolute;
+  top: 17.5%;
+  right: 10%;
+  padding-left: 48%;
+}
+
+.informacion {
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 12%;
+}
+
+.textos1 li {
+  font-size: 10px;
+  display: block;
+  margin-bottom: 8%;
+  border-color: white;
+}
+
+.textos1 li a {
+  font-family: "Lulo", serif;
+  color: black;
+  text-decoration: none;
+}
+
+
+/*CONTENEDOR CAJA 2*/
+
+.caja-pequena-1 {
+  display: flex;
+  flex-grow: 0.35;
+  width: 10%;
+  box-sizing: border-box;
+  border-right:groove;
+  border-left: groove;
+}
+
+.textos2 {
+  position: relative;
+  display: block;
+  top: 6%;
+  margin-left: 25%;
+  overflow-wrap: break-word;
+}
+
+.contactame {
+  font-size: 20px;
+  margin-bottom: 5%;
+  margin-top: 20%;
+}
+
+.textos2 p,
+.textos2 p b {
+  font-family: "Avenir", serif;
+  margin-bottom: 4.5%;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+/*CONTENEDOR CAJA 3*/
+
+.caja-pequena-2 {
+  display: flex;
+  flex-grow: 0.2;
+  flex-direction: column;
+  width: 15%;
+  overflow: visible;
+  min-height: 400px;
+}
+
+.textos3 {
+  position: relative;
+  top: 9%;
+  left: 17%;
+  display: block;
+  text-align: center;
+  line-height: 2;
+}
+
+.caja-pequena-2 h4 {
+  margin-top: 5%;
+  font-size: 20px;
+}
+
+.caja-pequena-2 p {
+  font-family: "Avenir", serif ;
+  margin-top: 2%;
+  font-size: 14px;
+}
+
+.caja-pequena-2 img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 15%;
+  padding-left: 35%;
+}
+
+/*********FIN FOOTER********/
+
+/*********MEDIA QUERIES********/
+@media screen and (max-width: 1450px) {
+  .contenedor-Registro {
+    left: 37%;
+  }
+  .textos2 {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .contenedor-Registro {
+    left: 34%;
+  }
+
+  .textos2 {
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .contenedor-Registro {
+    left: 31%;
+  }
+
+  .textos2 {
+    margin-left: 10%;
+  }
+}
+
+/*PÓRTATIL*/
+@media screen and (max-width:1024px) {
+  nav ul li a {
+    font-size: 17px;
+  }
+
+  .contenedor-Registro {
+    left: 29%;
+  }
+
+  .textos1 {
+    padding-left: 50%;
+  }
+
+  .informacion {
+    font-size: 17px;
+  }
+
+  .textos1 li a {
+    font-size: 9px;
+  }
+
+  .contactame {
+    margin-top: 29%;
+    font-size: 17px;
+  }
+
+  .textos2 {
+    margin-left: 10%;
+  }
+
+  .textos2 p,
+  .textos2 p b{
+    font-size: 12px;
+  }
+
+  .caja-pequena-2 h4 {
+    margin-top: 14%;
+    font-size: 17px;
+  }
+
+  .caja-pequena-2 p {
+    font-size: 12px;
+  }
+}
+
+/*TABLET*/
+@media screen and (max-width: 960px) {
+  .checkbtn {
+    display: block;
+  }
+
+  nav .menu-horizontal {
+    background: #37a5bd;
+    left: -100%;
+    position: fixed;
+    width: 100%;
+    top: 100px;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav .menu-horizontal li {
+    display: block;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+  }
+
+  nav .menu-horizontal li a {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  nav .menu-horizontal li a.active,
+  nav .menu-horizontal li a:hover {
+    color: black;
+    transition: .3s;
+  }
+
+  nav .menu-horizontal li:hover .menu-vertical {
+    display: none;
+  }
+
+  #check {
+    display: none;
+  }
+
+  #check:checked~ul {
+    height: 100vh;
+    left: 0;
+  }
+
+  #check:checked~nav ul li {
+    display: block;
+  }
+
+  #check:checked~header {
+    height: 0;
+  }
+
+  .contenedor-Registro {
+    left: 27%;
+  }
+
+  .textos2 {
+    margin-left: 9%;
+  }
+
+  .contactame {
+    margin-top: 28%;
+  }
+
+  .caja-pequena-2 h4 {
+    margin-top: 12%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .contenedor-Registro {
+    left: 26%;
+  }
+
+  #contenedor-cajas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .caja-grande,
+  .caja-pequena-1,
+  .caja-pequena-2 {
+    flex: 1 0 100%;
+  }
+
+  .caja-grande {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .caja-grande img{
+    position: relative;
+    top: 0;
+    width: 12%;
+    margin-left: 9.5%;
+  }
+
+  .informacion {
+    display: none;
+    position: absolute;
+    font-size: 20px;
+  }
+
+  .textos1 {
+    width: 70%;
+    list-style-type: none;
+    position: absolute;
+    top: 30%;
+    left: 13%;
+    padding-left: 11%;
+  }
+
+  .textos1 li {
+    float: left;
+    padding: 0 4px;
+    display: flex;
+    margin-bottom: 5%;
+    border-color: white;
+  }
+
+  .linea-difuminada2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    height: 1px;
+    border-bottom: groove;
+    width: 95%;
+  }
+
+  .caja-pequena-1 {
+    margin-bottom: 0;
+    height: 10%;
+    border-right: none;
+    border-left: none;
+  }
+
+  .textos2 {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  .textos2 h4 {
+    position: relative;
+    margin-top: 4%;
+    margin-bottom: 3.5%;
+  }
+
+  .textos2 p {
+    float: left;
+    padding: 0 4px;
+    margin-bottom: 3%;
+  }
+
+  .linea-difuminada3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    height: 1px;
+    border-bottom: groove;
+    width: 95%;
+  }
+
+  .caja-pequena-2 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    min-height: 270px;
+  }
+
+  .textos3 {
+    position: relative;
+    top: 0;
+    left: -23%;
+  }
+
+  .textos3 h4 {
+    margin-top: 10%;
+  }
+
+  .textos3 p {
+    margin-top: 2%;
+  }
+
+  .caja-pequena-2 img {
+    position: absolute;
+    top: 10%;
+    float: right;
+    height: auto;
+    width: 80%;
+    padding-left: 52%;
+  }
+}
+
+/*SMARTPHONE*/
+@media screen and (min-width: 520px) and (max-width: 768px) {
+  .enlace-logo img {
+    margin-top: 16px;
+    height: 50px;
+    width: auto;
+  }
+
+  nav .menu-horizontal {
+    top: 72px;
+  }
+
+  .contenedor-Registro {
+    left: 23%;
+  }
+
+  #guiaContraseña {
+    font-size: 0.8rem;
+  }
+
+  .wrapper {
+    width: 360px;
+    padding: 20px 30px;
+  }
+
+  .wrapper h1 {
+    font-size: 27px;
+  }
+
+  .wrapper .input-box {
+    margin: 25px 0;
+  }
+
+  .input-box input {
+    font-size: 12px;
+  }
+
+  .wrapper .condiciones {
+    margin: 0 10px;
+  }
+
+  .condiciones label {
+    font-size: 14px;
+  }
+
+  .condiciones a {
+    font-size: 14px;
+  }
+
+  .wrapper .boton {
+    font-size: 14px;
+  }
+
+  .registrarse p {
+    font-size: 14px;
+  }
+
+
+  #contenedor-cajas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .caja-grande,
+  .caja-pequena-1,
+  .caja-pequena-2 {
+    flex: 1 0 100%;
+  }
+
+  .caja-grande {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .caja-grande img{
+    position: relative;
+    top: 0;
+    width: 12%;
+    margin-left: 9.8%;
+  }
+
+  .informacion {
+    display: none;
+    position: absolute;
+    font-size: 20px;
+  }
+
+  .textos1 {
+    width: 70%;
+    list-style-type: none;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    padding-left: 11%;
+  }
+
+  .textos1 li {
+    float: left;
+    padding: 0 4px;
+    display: flex;
+    margin-bottom: 5%;
+    border-color: white;
+  }
+
+  .textos1 li a {
+    font-size: 8px;
+  }
+
+  .linea-difuminada2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    height: 1px;
+    border-bottom: groove;
+    width: 95%;
+  }
+
+  .caja-pequena-1 {
+    margin-bottom: 0;
+    height: 10%;
+    border-right: none;
+    border-left: none;
+  }
+
+  .textos2 {
+    position: relative;
+    top: 0;
+    width: 90%;
+    left: 0;
+  }
+
+  .textos2 p , .textos2 p b{
+    font-size: 11px;
+  }
+
+  .textos2 h4 {
+    position: relative;
+    margin-top: 4%;
+    margin-bottom: 3.5%;
+  }
+
+  .textos2 p {
+    float: left;
+    padding: 0 4px;
+    margin-bottom: 3%;
+  }
+
+  .linea-difuminada3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    height: 1px;
+    border-bottom: groove;
+    width: 95%;
+  }
+
+  .caja-pequena-2 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    min-height: auto;
+    height: 150px;
+  }
+
+  .textos3 {
+    position: relative;
+    top: 0;
+    left: -23%;
+  }
+
+  .textos3 h4 {
+    margin-top: 6%;
+    margin-left: 9%;
+  }
+
+  .textos3 p {
+    margin-top: 2%;
+    margin-left: 9%;
+  }
+
+  .caja-pequena-2 img {
+    position: absolute;
+    top: 10%;
+    float: right;
+    height: auto;
+    width: 85%;
+    padding-left: 60%;
+  }
+}
+
+@media screen and (max-width: 640px){
+  .contenedor-Registro {
+    left: 21%;
+  }
+}
+
+@media screen and (max-width: 580px){
+  .contenedor-Registro {
+    left: 19%;
+  }
+
+  .textos1 ul li a {
+    font-size: 7px;
+  }
+}
+
+/*SMARTPHONE 2*/
+@media screen and (max-width: 520px){
+  .checkbtn {
+    top: 16px;
+    font-size: 23px;
+  }
+
+  .enlace-logo img {
+    margin-top: 6px;
+    margin-left: 15px;
+    height: 40px;
+    width: auto;
+  }
+
+  nav .menu-horizontal {
+    top: 55px;
+  }
+
+  .contenedor-Registro {
+    left: 15%;
+  }
+
+  #guiaContraseña {
+    font-size: 0.8rem;
+  }
+
+  .wrapper {
+    width: 360px;
+    padding: 20px 30px;
+  }
+
+  .wrapper h1 {
+    font-size: 27px;
+  }
+
+  .wrapper .input-box {
+    margin: 25px 0;
+  }
+
+  .input-box input {
+    font-size: 12px;
+  }
+
+  .wrapper .condiciones {
+    margin: 0 10px;
+  }
+
+  .condiciones label {
+    font-size: 14px;
+  }
+
+  .condiciones a {
+    font-size: 14px;
+  }
+
+  .wrapper .boton {
+    font-size: 14px;
+  }
+
+  .registrarse p {
+    font-size: 14px;
+  }
+
+  #contenedor-cajas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+  }
+
+  .caja-grande,
+  .caja-pequena-1,
+  .caja-pequena-2 {
+    flex: 1 0 100%;
+  }
+
+  .caja-grande {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .caja-grande img{
+    position: relative;
+    top: 0;
+    width: 12%;
+    margin-left: 9.8%;
+  }
+
+  .informacion {
+    display: none;
+    position: absolute;
+    font-size: 20px;
+  }
+
+  .textos1 {
+    width: 70%;
+    list-style-type: none;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    padding-left: 11%;
+  }
+
+  .textos1 li {
+    float: left;
+    padding: 0 4px;
+    display: flex;
+    margin-bottom: 5%;
+    border-color: white;
+  }
+
+  .textos1 li a {
+    font-size: 5px;
+  }
+
+  .linea-difuminada2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    height: 1px;
+    border-bottom: groove;
+    width: 95%;
+  }
+
+  .caja-pequena-1 {
+    margin-bottom: 0;
+    height: 10%;
+    border-right: none;
+    border-left: none;
+  }
+
+  .textos2 {
+    position: relative;
+    top: -40px;
+    width: 90%;
+    left: 0;
+  }
+
+  .textos2 p , .textos2 p b{
+    font-size: 10px;
+  }
+
+  .textos2 h4 {
+    position: relative;
+    margin-top: 4%;
+    margin-bottom: 3.5%;
+    font-size: 15px;
+  }
+
+  .textos2 p {
+    float: left;
+    padding: 0 4px;
+    margin-bottom: 3%;
+  }
+
+  .linea-difuminada3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    height: 1px;
+    border-bottom: groove;
+    width: 95%;
+  }
+
+  .caja-pequena-2 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    min-height: auto;
+    height: 150px;
+  }
+
+  .textos3 {
+    position: relative;
+    top: 0;
+    left: -23%;
+  }
+
+  .textos3 h4 {
+    margin-top: 6%;
+    margin-left: 9%;
+    font-size: 15px;
+  }
+
+  .textos3 p {
+    margin-top: 2%;
+    margin-left: 9%;
+    font-size: 10px;
+  }
+
+  .caja-pequena-2 img {
+    position: absolute;
+    top: 10%;
+    float: right;
+    height: auto;
+    width: 90%;
+    padding-left: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .enlace-logo img {
+    margin-top: 20px;
+    margin-left: 15px;
+    height: 50px;
+    width: auto;
+  }
+
+  .checkbtn {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .contenedor-Registro {
+    left: 15%;
+  }
+
+  nav .menu-horizontal {
+    top: 92px;
+  }
+
+  .icono-validacion {
+    right: -10px;
+    top: 46%;
+    font-size: 0.7rem;
+  }
+  
+  .icono-validacion::before {
+    font-size: 0.7rem;
+  }
+
+  #guiaContraseña {
+    font-size: 0.7rem;
+  }
+
+  .wrapper {
+    width: 400px;
+    padding: 10px 20px;
+  }
+
+  .wrapper h1 {
+    font-size: 24px;
+  }
+
+  .wrapper .input-box {
+    margin: 25px 0;
+  }
+
+  .input-box input {
+    font-size: 10px;
+  }
+
+  .wrapper .condiciones {
+    margin: 0 10px;
+  }
+
+  .condiciones label {
+    font-size: 12px;
+  }
+
+  .condiciones a {
+    font-size: 12px;
+  }
+
+  .wrapper .boton {
+    font-size: 12px;
+  }
+
+  .registrarse p {
+    font-size: 12px;
+  }
+
+  .caja-grande {
+    height: 16%;
+  }
+
+  .caja-grande img {
+    top: 20px;
+    width: 15%;
+  }
+
+  .textos1 {
+    width: 80%;
+    list-style-type: none;
+    position: absolute;
+    top: 20px;
+    left: 15%;
+    padding-left: 15%;
+  }
+
+  .textos1 li {
+    float: left;
+    padding: 0 4px;
+    display: flex;
+    margin-bottom: 5%;
+    border-color: white;
+  }
+
+
+  .textos1 li a {
+    font-size: 4px;
+  }
+
+  .caja-pequena-1 {
+    margin-bottom: 0;
+    height: 10%;
+    border-right: none;
+    border-left: none;
+  }
+
+  .textos2 {
+    position: relative;
+    top: -40px;
+    width: 90%;
+    left: 0;
+  }
+
+  .textos2 p , .textos2 p b{
+    font-size: 10px;
+  }
+
+  .textos2 h4 {
+    position: relative;
+    margin-top: 4%;
+    margin-bottom: 3.5%;
+    font-size: 12px;
+  }
+
+  .textos2 p {
+    float: left;
+    padding: 0 2px;
+    margin-bottom: 3%;
+  }
+
+  .caja-pequena-2 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    min-height: auto;
+    height: 160px;
+  }
+
+  .textos3 {
+    position: relative;
+    left: -6%;
+  }
+
+  .textos3 h4 {
+    margin-top: 0;
+    margin-left: 8%;
+    font-size: 11px;
+  }
+
+  .textos3 p {
+    margin-top: 2%;
+    margin-left: 5%;
+    font-size: 9px;
+    width: 100%;
+  }
+
+  .caja-pequena-2 img {
+    position: absolute;
+    top: 32%;
+    left: 34%;
+    float: right;
+    height: auto;
+    width: 30%;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .contenedor-Registro {
+    left: 14%;
+  }
+
+  .wrapper {
+    width: 270px;
+    padding: 5px 10px;
+  }
+
+  .wrapper h1 {
+    font-size: 20px;
+  }
+
+  .wrapper .input-box {
+    margin: 25px 0;
+  }
+
+  .input-box input {
+    width: 97%;
+  }
+
+  .icono-validacion {
+    right: -8px;
+  }
+
+  .input-box input {
+    font-size: 10px;
+  }
+
+  .wrapper .condiciones {
+    margin: 0 5px;
+  }
+
+  .condiciones label {
+    font-size: 12px;
+  }
+
+  .condiciones a {
+    font-size: 12px;
+  }
+
+  .wrapper .boton {
+    font-size: 12px;
+  }
+
+  .registrarse p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 380px){
+  .contenedor-Registro {
+    left: 10%;
+  }
+
+  .wrapper {
+    width: 270px;
+    padding: 5px 10px;
+  }
+
+  .input-box {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 350px){
+  nav {
+    height: 10%;
+  }
+
+  .contenedor-Registro {
+    left: 5.5%;
+  }
+
+  .input-box {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 320px){
+  nav {
+    height: 10%;
+  }
+
+  .contenedor-Registro {
+    left: 3.5%;
+  }
+}
+/*********FIN MEDIA QUERIES*********/

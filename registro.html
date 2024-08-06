@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles2.css">
+    <link rel="stylesheet" href="./css/styles4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/validarRegistro.js"></script>
+    <title>Waves | Login</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="#" class="enlace-logo">
+                <img src="images/Logo Waves.png" class="Logo" alt="Logo">
+            </a>
+            <ul class="menu-horizontal">
+                <li><a class="active" href="index.html">Inicio</a></li>
+                <li><a href="#">Rebajas</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#">Surf</a></li>
+                <li><a href="#">Bodyboard</a></li>
+                <li><a href="#">Neoprenos</a></li>
+                <li><a href="#">Accesorios</a></li>
+                <li><a href="#">Ropa y prendas</a>
+                    <ul class="menu-vertical">
+                        <li><a href="#">Hombre</a></li>
+                        <li><a href="#">Mujer</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contenedor-Registro">
+            <div class="wrapper">
+                <form action="" id="registro-form">
+                    <h1>Crear cuenta en Waves</h1>
+                    <div class="input-box">
+                        <label>
+                            <input type="text" placeholder="Usuario" required id="usuario">
+                            <i class='bx bx-user'></i>
+                        </label>
+                    </div>
+
+                    <div class="input-box">
+                        <label>
+                            <input type="email" placeholder="Correo electrónico" required id="correo">
+                            <i class='bx bx-envelope'></i>
+                            <span class="icono-validacion" role="img"></span>
+                        </label>
+                    </div>
+
+                    <div class="input-box">
+                        <label>
+                            <input type="password" placeholder="Contraseña" required id="contraseña" pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+}{':;?/>.<,]).{8,}$/">
+                            <i class='bx bx-lock-alt' ></i>
+                        </label>
+                        <span class="mensaje-contraseña" id="mensaje-contraseña"></span>
+                    </div>
+
+                    <div class="input-box">
+                        <label>
+                            <input type="password" placeholder="Confirmar contraseña" required id="confirmar-contraseña">
+                            <i class='bx bx-lock-alt' ></i>
+                        </label>
+                    </div>
+
+                    <div id="guiaContraseña" style="display: none;">
+                        La contraseña debe tener al menos 8 caracteres, incluyendo una letra minúscula, una letra mayúscula, un número y un carácter especial.
+                    </div>
+
+                    <div class="condiciones">
+                        <a href="#">¿Aceptas nuestras condiciones?</a>
+                        <label><input type="checkbox" id="aceptado"> Acepto</label>
+                    </div>
+
+                    <button type="submit" class="boton">Registrarme</button>
+
+                    <div class="registrarse">
+                        <p>¿Ya te has unido a Waves?
+                            <a href="login.html">Inicia sesión aquí</a></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="linea-difuminada"></section>
+    </main>
+
+    <footer>
+        <section id="contenedor-cajas">
+            <section class="caja-grande">
+                <img src="./images/Logo Waves.png" alt="Logo">
+                <section class="textos1">
+                    <h4 class="informacion">Información</h4>
+                    <ul>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Términos de servicio</a></li>
+                        <li><a href="#">Política de envíos</a></li>
+                        <li><a href="#">Devoluciones y reembolsos</a></li>
+                        <li><a href="#">Política privacidad</a></li>
+                        <li><a href="#">Antes de desembalar</a></li>
+                        <li><a href="#">Garantías</a></li>
+                    </ul>
+                </section>
+            </section>
+
+            <section class="linea-difuminada2"></section>
+
+            <section class="caja-pequena-1">
+                <section class="textos2">
+                    <h4 class="contactame">Contáctenos</h4>
+                    <p>Correo contacto productos:</p>
+                    <p><b>waves@wavessurfshop.com</b></p>
+                    <p>Otras consultas:</p>
+                    <p><b>consultaswaves@wavessurfshop.com</b></p>
+                    <p>Síguenos en Instagram:</p>
+                    <p><b>@WavesShop</b></p>
+                    <p>Whatsapp:</p>
+                    <p><b>(+34) 657 84 40 31</b></p>
+                    <p>Twitter:</p>
+                    <p><b>@WavesShop</b></p>
+                </section>
+            </section>
+
+            <section class="linea-difuminada3"></section>
+
+            <section class="caja-pequena-2">
+                <section class="textos3">
+                    <h4>Waves Surf Shops - Tiendas</h4>
+                    <p>FUENGIROLA | Pº. Marítimo, Rey de España, 43</p>
+                </section>
+                <img src="./images/fotomaps.png" alt="FotoMaps">
+            </section>
+        </section>
+
+        <section class="linea-difuminada"></section>
+    </footer>
+</body>
